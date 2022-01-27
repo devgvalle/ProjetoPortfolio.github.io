@@ -1,0 +1,36 @@
+.header {
+  max-width: 1200px; /* como é um site com pouco conteúdo, não há necessidade do conteúdo crescer tanto*/
+  padding: 40px 20px;
+  margin: 0 auto; /* para manter alinhado, com o max width, 0 para cima e para baixo e auto para os lados */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap; /* para caso o usuário diminua a tela, o menu quebre */
+  gap: 20px;
+  justify-content: center;
+}
+
+.header-menu a {
+  font-size: 1.125rem;
+  line-height: 1.3px;
+  padding: 15px 15px; /* fazemos isso para o espaço de clique ativo ficar maior */
+  text-decoration: none;
+  color: #141414;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .header{
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+  }
+  .header a {
+    background: #f5f5f5;
+    border-radius: 4px;
+  }
+}
